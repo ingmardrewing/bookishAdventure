@@ -1,4 +1,5 @@
 import { BookishAdventurePage } from './app.po';
+import { browser, element, by } from 'protractor';
 
 describe('bookish-adventure App', () => {
   let page: BookishAdventurePage;
@@ -7,8 +8,4 @@ describe('bookish-adventure App', () => {
     page = new BookishAdventurePage();
   });
 
-  it('should display message saying app works', () => {
-    page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
-  });
 });

@@ -1,3 +1,13 @@
 <h1>
-  {{title}}
+  {{currentPage().title}}
 </h1>
+<p>
+  {{currentPage().description}}
+</p>
+
+<ul>
+  <li *ngFor='let action of currentPage().actions'
+    (click)="selectAction(action)" >
+    {{action.title}}
+  </li>
+</ul>
